@@ -3,14 +3,14 @@ import { usePathname } from 'next/navigation'
 import Navbar from '../../../Components/Navbar/Navbar';
 import Footer from '../../../Components/Footer/Footer';
 import Products from '../../../Components/Products/Products';
-import stemkit from "./../../../Components/images/stem-kit.webp";
-import { url } from 'inspector';
+
+
 
 const products = {
   'stem-kit': [
     {
       id: 1,
-      imageUrl: stemkit,
+      imageUrl: '/images/product-images/beginner-kit/beginner-kit.png',
       url:'stem-kit/beginner-kit',
       title: "Beginner Kit",
       description:
@@ -20,7 +20,7 @@ const products = {
     },
     {
       id: 2,
-      imageUrl: stemkit,
+      imageUrl: '/images/product-images/plug-play-robo-kit/plug-n-play.png',
       url: 'stem-kit/plug-play-robo-kit',
       title: "Plug N Play Robo Kit",
       description: `1) 13 Cretiles & accessories + Construction Kit. 2) Plug-n-play blocks for students to easily learn 
@@ -34,7 +34,7 @@ const products = {
     },
     {
       id: 3,
-      imageUrl: stemkit,
+      imageUrl: '/images/product-images/junior-kit/junior-kit.png',
       url:'stem-kit/junior-kit',
       title: "Junior Kit",
       description: `1) 19 Cretiles & Accessories + Construction Kit
@@ -47,7 +47,7 @@ const products = {
     },
     {
       id: 4,
-      imageUrl: stemkit,
+      imageUrl: '/images/product-images/robocode-kit/robocode-kit.jpeg',
       url:'stem-kit/robocode-kit',
       title: "RoboCode Kit ",
       description: `1) 16 Cretiles & accessories + Construction Kit
@@ -61,7 +61,7 @@ const products = {
     },
     {
       id: 5,
-      imageUrl: stemkit,
+      imageUrl: '/images/product-images/jr-sr-combined-kit/jr-sr-kit.png',
       url:'stem-kit/jr-sr-combined-kit',
       title: "Jr. & Sr. Combined Kit",
       description: `1)  20 Cretiles & Accessories + Construction Kit
@@ -72,7 +72,7 @@ const products = {
     },
     {
       id: 6,
-      imageUrl: stemkit,
+      imageUrl: '/images/product-images/mini-school-kit/mini-school-kit.png',
       title: "Mini School Kit",
       url:"stem-kit/mini-school-kit",
       description: `1) 40 Cretiles, Accessories
@@ -87,7 +87,7 @@ const products = {
     },
     {
       id: 7,
-      imageUrl: stemkit,
+      imageUrl: '/images/product-images/school-kit/school-kit.png',
       url: 'stem-kit/school-kit',
       title: "School KIT",
       description: `1) 62 Cretiles, Accessories & 100+ Pieces of Construction kit
@@ -102,7 +102,7 @@ const products = {
     },
     {
       id: 8,
-      imageUrl: stemkit,
+      imageUrl: '/images/product-images/rapid-iot-kit/rapid-iot-kit.png',
       url: 'stem-kit/rapid-iot-kit',
       title: "Rapid IoT Kit",
       description: `1) 62 Cretiles, Accessories + Android Tablet + 100+ Pieces of Construction kit
@@ -120,16 +120,71 @@ const products = {
   'laptops': [
     {
       id: 1,
-      imageUrl: '/images/laptop.webp',
+      imageUrl: '/images/product-images/rapid-iot-kit/rapid-iot-kit.png',
       url: 'gaming-laptop',
       title: 'Gaming Laptop',
       description: 'High performance gaming laptop with latest GPU and CPU.',
       features: ['2 years warranty', 'Complete box'],
       isFeatured: true,
     },
-    // ... other laptop products
+    // ... other laptop product
   ],
-  // ... other categories
+  'mini-pc':[
+    {
+      id: 1,
+      imageUrl: '/images/product-images/mini-pc/bolt100.png',
+      url: 'mini-pc/bolt-a-100',
+      title: 'Bolt A100',
+      description: 'CPU: Celeron N5100, Storage: 8+128GB',
+      features: ['2 years warranty', 'Complete box'],
+      isFeatured: true,
+    },
+    {
+      id: 2,
+      imageUrl: '/images/product-images/mini-pc/bolt-a-105.png',
+      url: 'mini-pc/bolt-a-105',
+      title: 'Bolt A105',
+      description: 'CPU: Celeron N5105, Storage: 8+128GB',
+      features: ['2 years warranty', 'Complete box'],
+      isFeatured: true,
+    },
+    {
+      id: 3,
+      imageUrl: '/images/product-images/mini-pc/bolt-a-035.png',
+      url: 'mini-pc/bolt-a-035',
+      title: 'Bolt A035',
+      description: 'CPU: Celeron N3350, Storage: 8+128GB',
+      features: ['2 years warranty', 'Complete box'],
+      isFeatured: true,
+    },
+    {
+      id: 4,
+      imageUrl: '/images/product-images/mini-pc/thunder-i.png',
+      url: 'mini-pc/thunder-i-051135',
+      title: 'Thunder-I 051135',
+      description: 'CPU: Core i 5-1135G 7, Storage: barebone',
+      features: ['2 years warranty', 'Complete box'],
+      isFeatured: true,
+    },
+    {
+      id: 5,
+      imageUrl: '/images/product-images/mini-pc/thunder-a.png',
+      url: 'mini-pc/thunder-a044504/a05605',
+      title: 'Thunder-A04504/A05605',
+      description: 'CPU: RyzenS 4500U RyzenS 4500U  , Storage: barebone',
+      features: ['2 years warranty', 'Complete box'],
+      isFeatured: true,
+    },
+    {
+      id: 6,
+      imageUrl: '/images/product-images/mini-pc/bolt-a-095.png',
+      url: 'mini-pc/bolt-a-095',
+      title: 'Bolt A095',
+      description: 'CPU: Celeron N5095, Storage: 8+128GB',
+      features: ['2 years warranty', 'Complete box'],
+      isFeatured: true,
+    },
+  ]
 };
 
 const CategoryPage = () => {

@@ -17,7 +17,7 @@ interface Product {
 function Products({ products }: { products: Product[] }): JSX.Element {
   return (
     <div className="">
-      <div className="mx-auto container py-8">
+      <div className="mx-auto container py-8 px-4 sm:px-0">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
           {products.map((product) => (
             <div key={product.id} className="product lg:mb-0 mb-8">
@@ -25,10 +25,11 @@ function Products({ products }: { products: Product[] }): JSX.Element {
               <div>
                 <Image
                   src={product.imageUrl}
-                  className="w-full h-44"
+                  className="w-full h-48"
                   alt={product.title}
                   width={100}
                   height={100}
+                  priority={true}
                 />
               </div>
              

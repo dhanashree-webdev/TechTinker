@@ -16,15 +16,15 @@ const ProductDetail = ({ product }) => {
             {product.title}
           </h1>
         </div>
-        <div className="py-4 border-b border-gray-200 flex items-center justify-between">
-          <p className="text-base leading-4 text-gray-800">Description</p>
-          <div className="flex items-center justify-center">
+        <div className="py-4 border-b border-gray-200 sm:flex  justify-between gap-5">
+          <p className="text-base leading-4 text-gray-800 font-medium">Description</p>
+          <div className="sm:flex items-center justify-center mt-2 sm:mt-0">
             <p className="text-sm leading-none text-gray-600">{product.description}</p>
           </div>
         </div>
-        <div className="py-4 border-b border-gray-200 flex items-center justify-between">
-          <p className="text-base leading-4 text-gray-800">Features</p>
-          <div className="flex items-center justify-center">
+        <div className="py-4 border-b border-gray-200 sm:flex items-center justify-between">
+          <p className="text-base leading-4 text-gray-800 font-medium">Features</p>
+          <div className="sm:flex items-center justify-center mt-2 sm:mt-0">
             <p className="text-sm leading-none text-gray-600">{product.features.join(', ')}</p>
           </div>
         </div>

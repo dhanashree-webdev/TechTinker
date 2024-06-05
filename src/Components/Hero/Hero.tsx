@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import './hero.css'
 import Image from "next/image";
 import banner1 from './images/product-banner-jpg.webp'
-import banner2 from './images/banner-1.png'
+import banner2 from './images/banner-2.webp'
 
 export function Hero() {
   return (
