@@ -1,0 +1,25 @@
+.carousel-root{
+    height: 70svh;
+}
+.carousel{
+    height: 70svh;
+}
+.thumbs-wrapper{
+    display: none;
+}
+@media (max-width:900px){
+    .carousel-root{
+        height: 40svh;
+    }
+    .carousel{
+        height: 40svh;
+    }
+}
+@media (max-width:600px) {
+    .carousel-root{
+        height: 30svh;
+    }
+    .carousel{
+        height: 30svh;
+    } 
+}
