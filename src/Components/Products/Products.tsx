@@ -27,6 +27,8 @@ function Products({ products }: { products: Product[] }): JSX.Element {
                   src={product.imageUrl}
                   className="w-full h-44"
                   alt={product.title}
+                  width={100}
+                  height={100}
                 />
               </div>
              
@@ -57,8 +59,8 @@ function Products({ products }: { products: Product[] }): JSX.Element {
                 </div>
                 <div className="p-4">
                   <div className="flex items-center">
-                  <Link href={`product.url || #`}>
-                    <h2 className="text-lg font-semibold">{product.title}</h2>
+                  <Link href={product.url || "#"}>
+                    <h2 className="text-lg font-semibold">{product.title}</h2>               
                     </Link>
                   </div>
                   <p className="text-xs text-gray-600 mt-2">{product.description}</p>

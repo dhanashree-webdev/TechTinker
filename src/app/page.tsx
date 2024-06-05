@@ -40,7 +40,10 @@ export default function Home() {
     <>
       <Navbar/>
       <Hero/>
+      <div>
+        <h2 className="text-4xl text-slate-500 text-center mt-10 font-bold">Our Products</h2>
       <Products products={products}/>
+      </div>
       <Modal/>
       <Footer/>
     </>

@@ -9,19 +9,25 @@ import banner2 from './images/banner-1.png'
 export function Hero() {
   return (
     <div className='.hero'>
-        <Carousel className={`rounded-xl`}>
+        <Carousel className={`rounded-xl`} showThumbs={false}>
         <div>
         <Image
             src={banner1}
             alt="image 1"
             className="w-full"
+            placeholder = "blur"
+            priority={false} 
+            quality={50}
         />
         </div>
         <div>
         <Image
             src={banner2}
             alt="image 2"
-            className="w-full "
+            className="w-full"
+            placeholder = "blur"
+            priority={false} 
+            quality={50}
         />
         </div>
             <div>
@@ -29,6 +35,9 @@ export function Hero() {
                     src={banner1}
                     alt="image 3"
                     className="w-full"
+                    placeholder = "blur"
+                    priority={false} 
+                    quality={50}
                 />
         </div>
     </Carousel>
