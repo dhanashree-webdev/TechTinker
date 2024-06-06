@@ -4,9 +4,18 @@ import Navbar from '../../../Components/Navbar/Navbar';
 import Footer from '../../../Components/Footer/Footer';
 import Products from '../../../Components/Products/Products';
 
+interface Product {
+  id: number;
+  imageUrl: string;
+  url: string;
+  title: string;
+  description: string;
+  features: string[];
+  isFeatured: boolean;
+}
 
 
-const products = {
+const products: { [key in 'stem-kit' | 'laptops' | 'mini-pc']: Product[] } = {
   'stem-kit': [
     {
       id: 1,
@@ -193,7 +202,7 @@ const CategoryPage = () => {
 
   // Split the pathname and extract the category
   const pathSegments = pathname.split("/").filter(segment => segment);
-  const category = pathSegments[1];  // Index 1 because the path starts with an empty string due to the leading '/'
+  const category = pathSegments[1] as 'stem-kit' | 'laptops' | 'mini-pc';  // Cast to specific union type
 
   const categoryProducts = products[category];
 

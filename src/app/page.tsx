@@ -6,7 +6,16 @@ import Modal from "@/Components/Modal/Modal";
 import Products from "@/Components/Products/Products";
 import Head from 'next/head';
 
-const products = [
+interface Product {
+  id: number;
+  imageUrl: string;
+  url: string;
+  title: string;
+  description: string;
+  features: string[];
+  isFeatured: boolean;
+}
+const products: Product[]= [
   {
     id: 1,
     imageUrl: '/images/category-images/stem-kit/stem-kit.webp',

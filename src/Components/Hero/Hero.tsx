@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import './hero.css'
 import Image from "next/image";
 import banner1 from './images/product-banner-jpg.webp'
-import banner2 from './images/banner-2.webp'
+import banner2 from './images/banner-2.jpg'
 
 export function Hero() {
   return (
@@ -12,9 +12,9 @@ export function Hero() {
         <Carousel className={`rounded-xl`} showThumbs={false}>
         <div>
         <Image
-            src={banner1}
+            src={banner2}
             alt="image 1"
-            className="w-full"
+            
             placeholder = "blur"
             priority={false} 
             quality={50}
@@ -24,7 +24,7 @@ export function Hero() {
         <Image
             src={banner2}
             alt="image 2"
-            className="w-full"
+            
             placeholder = "blur"
             priority={false} 
             quality={50}
@@ -32,9 +32,9 @@ export function Hero() {
         </div>
             <div>
             <Image
-                    src={banner1}
+                    src={banner2}
                     alt="image 3"
-                    className="w-full"
+                    
                     placeholder = "blur"
                     priority={false} 
                     quality={50}

@@ -1,5 +1,7 @@
 "use client"
 import React, { useState } from "react";
+import Image from "next/image";
+import modal_image from './modal.webp'
 
 
 export default function Modal() {
@@ -7,7 +9,7 @@ export default function Modal() {
 
   return (
     <>
-  <div className="xl:flex xl:justify-end py-16">
+  <div className="xl:flex xl:justify-end pb-5 sm:py-16 ">
             <div className="container sm:mx-auto">
                 <div className="block xl:flex justify-between xl:items-center lg:items-center md:flex">
                     <div className="w-11/12 xl:w-4/12 mx-auto xl:mx-0 md:w-5/12">
@@ -29,7 +31,7 @@ export default function Modal() {
                     </div>
                     <div className="w-11/12 xl:w-5/12 mx-auto xl:mx-0 mt-8 xl:mt-0 flex justify-end md:w-5/12 bg-indigo-100 relative py-20">
                         <div className="h-4/5 w-4/5">
-                            <img src="https://cdn.tuk.dev/assets/photo-1496430689199-7d6a8ebd3a2f.jfif" alt="img" className="h-full w-full overflow-hidden object-cover relative z-10 xl:-ml-56 lg:-ml-32 sm:-ml-20 -ml-12 md:-ml-20 rounded" width={50} height={50}/>
+                            <Image src={modal_image} alt="img" unoptimized className="h-full w-full overflow-hidden object-cover relative z-10 xl:-ml-56 lg:-ml-32 sm:-ml-20 -ml-12 md:-ml-20 rounded" width={50} height={50}/>
                         </div>
                         <div className="absolute bottom-0 right-0 pb-2 pr-2 z-0">
                             <svg width={243} height={163} xmlns="http://www.w3.org/2000/svg">

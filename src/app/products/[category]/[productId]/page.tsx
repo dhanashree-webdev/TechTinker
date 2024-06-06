@@ -4,8 +4,17 @@ import ProductDetail from '../../../../Components/ProductDetail/page';
 import Navbar from '../../../../Components/Navbar/Navbar';
 import Footer from '../../../../Components/Footer/Footer';
 
+interface Product {
+  id: number;
+  imageUrl: string;
+  url: string;
+  title: string;
+  description: string;
+  features: string[];
+  isFeatured: boolean;
+}
 
-const products = {
+const products: { [key in 'stem-kit' | 'laptops' | 'mini-pc']: Product[] } = {
   'stem-kit': [
     {
       id: 1,
@@ -187,27 +196,31 @@ const products = {
 
 const ProductPage = () => {
   const pathname = usePathname();
-  console.log(pathname)
-   // Split the pathname and extract the category and productId
-   const pathSegments = pathname.split("/").filter(segment => segment);
-   const category = pathSegments[1];  // Index 1 because the path starts with an empty string due to the leading '/'
-   const productId = pathSegments[2]; // Index 2 for the productId
+  console.log(pathname);
 
-   console.log(category,productId)
+  // Split the pathname and extract the category and productId
+  const pathSegments = pathname.split("/").filter(segment => segment);
+  const category = pathSegments[1] as 'stem-kit' | 'laptops' | 'mini-pc';  // Cast to specific union type
+  const productId = pathSegments[2];
 
-  const product = products[category]?.find((product) => product.url === productId);
+  console.log(category, productId);
 
-  if (!product) {
-    return <div>Product not found</div>;
+  if (category in products) {
+    const product = products[category]?.find((product) => product.url === productId);
+    if (!product) {
+      return <div>Product not found</div>;
+    }
+    return (
+      <>
+        <Navbar />
+        <ProductDetail product={product} />
+        <Footer />
+      </>
+    );
+  } else {
+    console.error("Invalid category:", category);
+    return <div>Invalid category</div>;
   }
-
-  return (
-    <>
-      <Navbar />
-      <ProductDetail product={product} />
-      <Footer />
-    </>
-  );
 };
 
 export default ProductPage;
